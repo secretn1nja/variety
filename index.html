@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+	<style>
+        .container {
+            text-align: center;
+            transition: filter 0.3s ease-in-out;
+        }
+
+        .blurred {
+            filter: blur(5px);
+        }
+    </style>
+</head>
+<body>
+    <div class="title-bar">
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        <h1>Your Title</h1>
+    </div>
+    
+    <div class="menu" id="menu">
+        <a href="#"><i class="fa fa-home"></i> Home</a>
+        <a href="pages/about.html"><i class="fa fa-info-circle"></i> About</a>
+        <a href="pages/tic-tac-toe.html"><i class="fa fa-leaf"></i> Relax</a>
+        <a href="pages/countdown.html"><i class="	fa fa-compass"></i> Countdown</a>
+		<a href="pages/contact.html"><i class="fa fa-address-book"></i> Contact</a>
+    </div>
+
+    <div class="container" id="container">
+        <h2>Welcome to Your Page!</h2>
+        <p>This is a simple example using the provided style.</p>
+    </div>
+	
+	<div class="popup" id="notificationPopup">
+		<div class="popup-content">
+			<span id="notificationText"></span>
+			<button onclick="closePopup()">Close</button>
+		</div>
+	</div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

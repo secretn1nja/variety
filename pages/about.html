@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/about.css">
+</head>
+<body>
+    <div class="title-bar">
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        <h1>About Us</h1>
+    </div>
+    
+    <div class="menu" id="menu">
+        <a href="../index.html"><i class="fa fa-home"></i> Home</a>
+        <a href="#"><i class="fa fa-info-circle"></i> About</a>
+        <a href="tic-tac-toe.html"><i class="fa fa-leaf"></i> Relax</a>
+        <a href="countdown.html"><i class="	fa fa-compass"></i> Countdown</a>
+		<a href="contact.html"><i class="fa fa-address-book"></i> Contact</a>
+    </div>
+
+    <div class="container" id="container">
+        <h2>Welcome to Our About Page!</h2>
+        <p>This is a brief overview of who we are and what we do.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id sapien non sem imperdiet convallis. Fusce suscipit, erat ut rhoncus bibendum, tellus libero tincidunt neque, id hendrerit odio tortor vel justo. Proin eget luctus leo, a tincidunt justo. Vivamus lacinia euismod dui, id fermentum odio. Integer ut tortor quis lacus imperdiet lobortis vel a justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        <p>Curabitur in augue vel mauris sollicitudin dictum. Aliquam erat volutpat. Nulla facilisi. Etiam interdum purus a nunc ultrices, in finibus mauris vulputate. Integer in vestibulum libero. Nam vitae eros nec purus lacinia scelerisque nec eget libero. Duis quis quam non sapien fringilla malesuada sit amet eu elit.</p>
+    </div>
+	
+	<div class="popup" id="notificationPopup">
+		<div class="popup-content">
+			<span id="notificationText"></span>
+			<button onclick="closePopup()">Close</button>
+		</div>
+	</div>
+
+    <script src="../js/about.js"></script>
+</body>
+</html>

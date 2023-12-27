@@ -1,0 +1,148 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f0f0f0; /* Light gray background */
+    transition: filter 0.3s ease-in-out;
+}
+
+.blurred {
+    filter: blur(5px);
+}
+
+.title-bar {
+    background-color: #282c35;
+    color: #61dafb;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-btn {
+    font-size: 24px;
+    cursor: pointer;
+    color: #61dafb;
+}
+
+.menu {
+    display: none;
+    background-color: rgba(40, 44, 53, 0.9); /* Dark blue-gray with transparency */
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border-radius: 10px; /* Curved corners */
+}
+
+.menu a {
+    color: #61dafb;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Adjusted styles to make the menu options appear like a centered popup */
+.menu.vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    background-color: #fff; /* White background for the content area */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px; /* Curved corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for the content area */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .title-bar {
+        padding: 5px;
+    }
+
+    .menu {
+        padding: 15px;
+    }
+
+    .menu a {
+        margin-bottom: 10px;
+    }
+
+    .container {
+        padding: 10px;
+        margin: 10px;
+    }
+}
+
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #282c35;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff; /* White background */
+    color: #282c35; /* Dark text color */
+    transition: border-color 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #61dafb; /* Focus color */
+}
+
+button {
+    background-color: #61dafb;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #5198b7;
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #2c3e50; /* Dark background color */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff; /* White text color */
+    z-index: 1000;
+}
+
+.popup-content {
+    position: relative;
+}
+
+#notificationText {
+    font-size: 18px;
+    margin-bottom: 15px;
+    display: block;
+}
