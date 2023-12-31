@@ -10,6 +10,8 @@ function register() {
     if (!nickname || !email || !password || !dob || !gender) {
         showCustomAlert('Please fill in all fields.');
         return;
+		console.log('Nickname:', nickname);
+		console.log('Email:', email);
     }
 
     // Additional validation for email format
@@ -42,51 +44,87 @@ function register() {
         return;
     }
 
-    // Check if email is already in use
-    checkEmailExists(email)
+    // Check if nickname is already in use
+    checkNicknameExists(nickname)
         .then(function (exists) {
             if (exists) {
-                showCustomAlert('Email is already in use. Please use a different email address.');
+                showCustomAlert('Nickname is already in use. Please choose a different nickname.');
             } else {
-                // Create user in Firebase Authentication
-                firebase.auth().createUserWithEmailAndPassword(email, password)
-                    .then(function (userCredential) {
-                        // Signed in
-                        var user = userCredential.user;
+                // Check if email is already in use
+                checkEmailExists(email)
+                    .then(function (emailExists) {
+                        if (emailExists) {
+                            showCustomAlert('Email is already in use. Please use a different email address.');
+                        } else {
+                            // Create user in Firebase Authentication
+                            firebase.auth().createUserWithEmailAndPassword(email, password)
+                                .then(function (userCredential) {
+                                    // Signed in
+                                    var user = userCredential.user;
 
-                        // Store additional user details in Firestore
-                        saveUserDetails(user.uid, {
-                            nickname: nickname,
-                            email: email,
-                            dob: dob,
-                            gender: gender
-                        });
+                                    // Store additional user details in Firestore
+                                    saveUserDetails(user.uid, {
+                                        nickname: nickname,
+                                        email: email,
+                                        dob: dob,
+                                        gender: gender
+                                    });
 
-                        // TODO: Handle registration success
-						showCustomAlert('Registration successful.');
-                        console.log('Registration successful:', user);
-                    })
-                    .catch(function (error) {
-                        var errorCode = error.code;
-                        var errorMessage = error.message;
-                        showCustomAlert('Error: ' + errorMessage);
-                        // TODO: Handle registration errors
+                                    // TODO: Handle registration success
+                                    showCustomAlert('Registration successful.');
+                                    console.log('Registration successful:', user);
+                                })
+                                .catch(function (error) {
+                                    var errorCode = error.code;
+                                    var errorMessage = error.message;
+                                    showCustomAlert('Error: ' + errorMessage);
+                                    // TODO: Handle registration errors
+                                });
+                        }
                     });
             }
         });
 }
 
+function checkNicknameExists(nickname) {
+    // Check if the nickname exists in your Firestore database
+    // Replace 'users' with the actual collection name where user details are stored
+    var db = firebase.firestore();
+
+    return db.collection('users')
+        .where('nickname', '==', nickname)
+        .get()
+        .then(function (querySnapshot) {
+            // If the querySnapshot is not empty, the nickname is already in use
+            return !querySnapshot.empty;
+        })
+        .catch(function (error) {
+            console.error('Error checking nickname:', error);
+            return false;
+        });
+}
 
 function checkEmailExists(email) {
-    return firebase.auth().fetchSignInMethodsForEmail(email)
-        .then(function (signInMethods) {
-            // If the array is empty, the email is not in use
-            return signInMethods.length > 0;
+    // Check if the email exists in your Firestore database
+    // Replace 'users' with the actual collection name where user details are stored
+    var db = firebase.firestore();
+
+    return db.collection('users')
+        .where('email', '==', email)
+        .get()
+        .then(function (querySnapshot) {
+            // If the querySnapshot is not empty, the email is already in use
+            return !querySnapshot.empty;
         })
         .catch(function (error) {
             console.error('Error checking email:', error);
             return false;
         });
+}
+
+function showCustomAlert(message) {
+    // Replace this with your custom alert implementation
+    alert(message);
 }
 
 function saveUserDetails(userId, userDetails) {

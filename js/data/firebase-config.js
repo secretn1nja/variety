@@ -4,7 +4,8 @@ const firebaseConfig = {
     projectId: "variety-66c40",
     storageBucket: "variety-66c40.appspot.com",
     messagingSenderId: "621536989998",
-    appId: "1:621536989998:web:b9e08027e9974a7533a0bf"
+    appId: "1:621536989998:web:b9e08027e9974a7533a0bf",
+	measurementId: "G-PXEWWJ4E99"
 };
 
 // Initialize Firebase
