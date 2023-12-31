@@ -72,6 +72,13 @@ function register() {
 
                                     // TODO: Handle registration success
                                     showCustomAlert('Registration successful.');
+									
+									// Delay the redirection for 2 seconds (adjust as needed)
+									setTimeout(function () {
+									// Redirect to the forum page
+										window.location.href = 'forum.html'; // Replace with the actual URL of your forum page
+									}, 5000);
+									
                                     console.log('Registration successful:', user);
                                 })
                                 .catch(function (error) {

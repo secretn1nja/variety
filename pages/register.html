@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>Forum</h1>
+        <h1 class="forum-title">F o r u m</h1>
     </header>
     
     <main>
@@ -35,6 +35,7 @@
                 </select>
 
                 <button type="button" onclick="register()">Register</button>
+				<button class="back-button" onclick="goBack()">Back to Forum</button>
             </form>
         </div>
     </main>
@@ -49,6 +50,12 @@
         <a href="#" class="close-btn" onclick="closeCustomAlert()">Close</a>
 		</div>
 	</div>
+	
+	<script>
+        function goBack() {
+            window.location.href = "forum.html"; // Replace with the actual URL of your forum page
+        }
+    </script>
     
     <!-- Firebase scripts -->
     <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-app-compat.js"></script>
