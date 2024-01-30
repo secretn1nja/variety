@@ -35,6 +35,17 @@ button:hover {
     transition: background-color 0.3s;
 }
 
+#difficulty {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
 #playButton:hover {
     background-color: #2980b9;
 }
@@ -126,10 +137,6 @@ button:hover {
     color: #fff;
     transform: scale(0.9);
     transition: transform 0.1s;
-}
-
-.cell.winner {
-    background-color: #2ecc71;
 }
 
 .cell.winner:before {
