@@ -19,6 +19,11 @@ h1 {
     font-size: 36px;
 }
 
+button:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
 #playButton {
     padding: 15px 30px;
     font-size: 18px;
@@ -100,13 +105,40 @@ h1 {
     transition: background-color 0.3s, color 0.3s;
 }
 
+.cell:before {
+    content: attr(data-content);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.cell[data-content]:before {
+    opacity: 1;
+}
+
 .cell:hover {
     background-color: #282c35;
+    transform: scale(1.1);
+    transition: transform 0.3s;
 }
 
 .cell:active {
     background-color: #61dafb;
     color: #fff;
+    transform: scale(0.9);
+    transition: transform 0.1s;
+}
+
+.cell.winner {
+    background-color: #2ecc71;
+}
+
+.cell.winner:before {
+    animation: winner 1s;
+}
+
+@keyframes winner {
+    0% { opacity: 0; transform: scale(0); }
+    100% { opacity: 1; transform: scale(1); }
 }
 
 #turnIndicator {

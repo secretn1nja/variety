@@ -1,5 +1,3 @@
-// script.js
-
 function toggleMenu() {
     const menu = document.getElementById("menu");
     const container = document.getElementById("container"); // Add an id to the container

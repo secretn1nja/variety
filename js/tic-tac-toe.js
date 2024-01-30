@@ -76,10 +76,16 @@ document.addEventListener("DOMContentLoaded", function () {
             [0, 3, 6], [1, 4, 7], [2, 5, 8],
             [0, 4, 8], [2, 4, 6]
         ];
-
+    
         return winningCombos.some(combo => {
             const [a, b, c] = combo;
-            return cells[a].textContent && cells[a].textContent === cells[b].textContent && cells[a].textContent === cells[c].textContent;
+            if (cells[a].textContent && cells[a].textContent === cells[b].textContent && cells[a].textContent === cells[c].textContent) {
+                cells[a].classList.add("winner");
+                cells[b].classList.add("winner");
+                cells[c].classList.add("winner");
+                return true;
+            }
+            return false;
         });
     }
 

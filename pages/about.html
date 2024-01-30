@@ -10,30 +10,34 @@
 <body>
     <div class="title-bar">
         <div class="menu-btn" onclick="toggleMenu()">☰</div>
-        <h1>About Us</h1>
+        <h1>About</h1>
     </div>
-    
-    <div class="menu" id="menu">
-        <a href="../index.html"><i class="fa fa-home"></i> Home</a>
-        <a href="#"><i class="fa fa-info-circle"></i> About</a>
-        <a href="tic-tac-toe.html"><i class="fa fa-leaf"></i> Relax</a>
-        <a href="countdown.html"><i class="	fa fa-compass"></i> Countdown</a>
-		<a href="contact.html"><i class="fa fa-address-book"></i> Contact</a>
-    </div>
+    <div>
+        <img src="img/backd.jpg" alt="Background Image" class="bg">
+        <div class="menu" id="menu">
+            <a href="../index.html"><i class="fa fa-home"></i> Home</a>
+            <a href="#"><i class="fa fa-info-circle"></i> About</a>
+            <a href="tic-tac-toe.html"><i class="fa fa-leaf"></i> Relax</a>
+            <a href="countdown.html"><i class="	fa fa-compass"></i> Shop</a>
+            <a href="contact.html"><i class="fa fa-address-book"></i> Contact</a>
+        </div>
 
-    <div class="container" id="container">
-        <h2>Welcome to Our About Page!</h2>
-        <p>This is a brief overview of who we are and what we do.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id sapien non sem imperdiet convallis. Fusce suscipit, erat ut rhoncus bibendum, tellus libero tincidunt neque, id hendrerit odio tortor vel justo. Proin eget luctus leo, a tincidunt justo. Vivamus lacinia euismod dui, id fermentum odio. Integer ut tortor quis lacus imperdiet lobortis vel a justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-        <p>Curabitur in augue vel mauris sollicitudin dictum. Aliquam erat volutpat. Nulla facilisi. Etiam interdum purus a nunc ultrices, in finibus mauris vulputate. Integer in vestibulum libero. Nam vitae eros nec purus lacinia scelerisque nec eget libero. Duis quis quam non sapien fringilla malesuada sit amet eu elit.</p>
+        <div class="container" id="container">
+            <h2>Welcome to Variety!</h2>
+            <p>This is a brief overview of who i am and what i do.</p>
+            <p>Hi, I am n1nja, a passionate GTA V player who enjoys the immersive and creative possibilities of FiveM, a modification that allows me to play multiplayer on customized dedicated servers. I have been playing GTA V since 2015 and FiveM since 2019. I love exploring new maps, driving cool vehicles, and creating fun scripts.</p>
+            <p>To share my experience offer a variety of FiveM products and services, such as scripts, vehicles, maps, clothes, graphic mods and improvments, launchers, and more. You can browse my shop starting from March 20 and find the best mods, scripts, and resources for your FiveM server and your client. You can also contact me for any support, feedback, or suggestions.</p>
+            <p>My desire is to provide you with the best FiveM experience possible, with quality, safety, and satisfaction guaranteed. I am always looking for new ways to improve my products and services, and I welcome your feedback and suggestions.</p>
+            <p>Join me starting March 20 and discover the amazing world of variety with me! 😊</p>
+        </div>
+        
+        <div class="popup" id="notificationPopup">
+            <div class="popup-content">
+                <span id="notificationText"></span>
+                <button onclick="closePopup()">Close</button>
+            </div>
+        </div>
     </div>
-	
-	<div class="popup" id="notificationPopup">
-		<div class="popup-content">
-			<span id="notificationText"></span>
-			<button onclick="closePopup()">Close</button>
-		</div>
-	</div>
 
     <script src="../js/about.js"></script>
 </body>
