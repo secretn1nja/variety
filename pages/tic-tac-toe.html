@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="../css/tic-tac-toe.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tic Tac Toe</h1>
+        <button id="playButton" onclick="showGame()">PLAY</button><br>
+		<a href="../index.html" class="back-btn">Back to Home</a>
+    </div>
+    <div class="popup" id="gamePopup">
+        <div class="popup-content">
+            <p id="turnIndicator"></p>
+            <div id="board" class="board"></div>
+        </div>
+    </div>
+    <div class="popup" id="winnerPopup">
+        <div class="popup-content">
+            <p id="winnerText"></p>
+            <a href="#" class="play-again-btn" onclick="resetBoard()">Play Again</a><br>
+			<a href="tic-tac-toe.html" class="back-btn">Return to Play</a>
+        </div>
+    </div>
+    <script src="../js/tic-tac-toe.js"></script>
+</body>
+</html>

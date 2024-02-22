@@ -1,96 +1,139 @@
+/* styles.css */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
-    transition: background-color 0.5s ease;
+    background-color: #f0f0f0; /* Light gray background */
+    transition: filter 0.3s ease-in-out;
 }
 
-header {
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    text-align: center;
-    padding: 1em 0;
-    transition: background-color 0.5s ease;
+.blurred {
+    filter: blur(5px);
 }
 
-nav {
-    background-color: #34495e;
-    color: #ecf0f1;
-    text-align: center;
-    padding: 1em 0;
-    transition: background-color 0.5s ease;
+.title-bar {
+    background-color: #282c35;
+    color: #61dafb;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-nav a {
-    color: #ecf0f1;
+
+.menu-btn {
+    font-size: 24px;
+    cursor: pointer;
+    color: #61dafb;
+}
+
+.menu {
+    display: none;
+    background-color: rgba(40, 44, 53, 0.9); /* Dark blue-gray with transparency */
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border-radius: 10px; /* Curved corners */
+}
+
+.menu a {
+    color: #61dafb;
     text-decoration: none;
-    margin: 0 1em;
-    padding: 0.5em 1em;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    display: block;
+    margin-bottom: 15px;
 }
 
-nav a:hover {
-    background-color: #3d566e;
-    color: #ffcc00;
+/* Adjusted styles to make the menu options appear like a centered popup */
+.menu.vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-section {
-    padding: 2em;
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: -1;
 }
 
-.product {
-    background-color: #ecf0f1;
-    padding: 1.5em;
-    margin: 1.5em;
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* White background for the content area */
+    padding: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 2%;
+    border-radius: 10px; /* Curved corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for the content area */
+    z-index: 1;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .title-bar {
+        padding: 5px;
+    }
+
+    .menu {
+        padding: 15px;
+    }
+
+    .menu a {
+        margin-bottom: 10px;
+    }
+
+    .container {
+        padding: 10px;
+        margin: 10px;
+    }
+}
+
+/* Add these styles to your existing CSS file or create a new one */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #2c3e50; /* Dark background color */
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff; /* White text color */
+    z-index: 1000;
 }
 
-.product:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+.popup-content {
+    position: relative;
+}
+
+#notificationText {
+    font-size: 18px;
+    margin-bottom: 15px;
+    display: block;
 }
 
 button {
+    padding: 10px 20px;
+    font-size: 16px;
     background-color: #3498db;
     color: #fff;
     border: none;
-    padding: 0.5em 1em;
-    font-size: 1em;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 button:hover {
     background-color: #2980b9;
-    color: #ffcc00;
-}
-
-footer {
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    transition: background-color 0.5s ease;
-}
-
-/* Responsive Design */
-@media only screen and (max-width: 600px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a {
-        margin: 1em 0;
-    }
 }
 

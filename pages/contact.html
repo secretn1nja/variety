@@ -3,53 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Minecraft Market</title>
-    <link rel="stylesheet" href="css/contact.css">
+    <title>Contact Us</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/contact.css">
 </head>
 <body>
+    <div class="title-bar">
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        <h1>Contact</h1>
+    </div>
+    
+    <div class="menu" id="menu">
+        <a href="../index.html"><i class="fa fa-home"></i> Home</a>
+        <a href="about.html"><i class="fa fa-info-circle"></i> About</a>
+        <a href="tic-tac-toe.html"><i class="fa fa-leaf"></i> Relax</a>
+        <a href="countdown.html"><i class="	fa fa-compass"></i> Shop</a>
+		<a href="#"><i class="fa fa-address-book"></i> Contact</a>
+    </div>
+    <div>
+        <img src="img/backd.jpg" alt="Background Image" class="bg">
+        <div class="container" id="container">
+            <h2>Welcome to Contact Page!</h2>
+            <p>Feel free to reach out using the information below:</p>
+            
+            <div class="contact-info">
+                <p><b>Email</b>: varietyentertainment97@outlook.com</p>
+            </div>
+            
+            <p>You can also use the form below to send a message:</p>
+            
+            <form id="contactForm" action="mailto:varietyenterainment97@outlook.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-    <header>
-        <h1>Minecraft Market</h1>
-        <p>Your go-to place for all things Minecraft!</p>
-    </header>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-    <nav>
-        <a href="../index.html">Home</a> |
-        <a href="products.html">Products</a> |
-        <a href="about.html">About Us</a> |
-        <a href="#">Contact</a>
-    </nav>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
 
-    <section class="contact-section">
-        <h2>Contact Us</h2>
-        <p>Have a question or feedback? Feel free to reach out to us using the form below:</p>
+                <button type="submit">Submit</button>
+            </form>
+            
+            <div class="popup" id="notificationPopup">
+                <div class="popup-content">
+                    <span id="notificationText"></span>
+                    <button onclick="closePopup()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <form action="https://discord.com/api/webhooks/1210008922388439062/RBJbK6YVJpjPUHPy1S6ipxWnCHiIJsKIGP6bWwzqIcyenN6S0H18-DXvgv2q-ApAwTlc" method="post" id="contact-form">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Your Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-
-    <div class="modal" id="custom-alert">
-		<div class="modal-content">
-			<p id="alert-message"></p>
-			<button onclick="closeAlert()">OK</button>
-		</div>
-	</div>
-
-    <footer>
-        <p>&copy; 2024 Minecraft Market. All rights reserved.</p>
-    </footer>
-
-	<script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'></script>
-	<script src="contact.js"></script>
+    <script src="../js/contact.js"></script>
 </body>
 </html>
