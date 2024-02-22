@@ -5,11 +5,10 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
 
         const name = form.querySelector('#name').value;
-        const email = form.querySelector('#email').value;
         const message = form.querySelector('#message').value;
 
         const payload = {
-            content: `\`\`\`css\n# New Form Submission\n\n\`\`\`**Name:** ${name}\n**Email:** ${email}\n**Message:** ${message}\n`,
+            content: `\`\`\`css\n# New Form Submission\n\n\`\`\`**Name:** ${name}\n**Message:** ${message}\n`,
         };
 		
 		swal("", "Logging In!", "success");
