@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
             content: `\`\`\`css\n# New Form Submission\n\n\`\`\`**Name:** ${name}\n**Message:** ${message}\n`,
         };
 		
-		swal("", "Logging In!", "success");
+		swal("", "Comanda efectuata cu success!", "success");
 
         try {
             const response = await fetch(form.action, {
