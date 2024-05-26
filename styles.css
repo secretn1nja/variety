@@ -1,64 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=IM+Fell+English+SC&display=swap');
+
 body {
-    transition: background-color 2.5s ease;
-    background-color: black;
+    background-color: #f0e6d2;
+    color: #333;
+    font-family: 'IM Fell English SC', serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(10, 10, 10, 0.7);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #b5864f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a3753e;
+}
+
+.parallax {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.example.com/parallax-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
     width: 80%;
-    min-width: 400px;
-    max-width: 600px;
-    margin: 5% auto;
-    /* background-image: linear-gradient(#fff, #fff, #fff 80%);*/
-    background-color: white;
-    color: black;
+    max-width: 900px;
+    background-color: rgba(253, 250, 241, 0.9);
+    padding: 20px;
+    border: 2px solid #d4af37;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px 0;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+h1 {
     text-align: center;
-    border: 2px solid white;
-    border-radius: 14px;
-    box-shadow: 0 30px 30px -10px #ffffffdd;
-    font-size: larger;
-    transition: transform 1.5s ease-out, background-color 1.5s ease, box-shadow 1.5s ease, border 1.0s ease, color 1.2s ease;
+    font-family: 'Cinzel', serif;
+    font-size: 2.5em;
+    color: #b5864f;
+    margin-top: 0;
+    padding: 10px;
+    border-bottom: 2px solid #b5864f;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.container-light {
-    /* background-image: linear-gradient(#f0f0f0, #ff6000, #ff620090 80%); */
-    /* background-image: linear-gradient(#040404, #040404, #040404a1 80%); */
-    background-color: black;
-    color: white;
-    border: 2px solid black;
-    box-shadow: 0 30px 30px -10px #04040456;
-    /* box-shadow: 0 30px 30px -10px #ff620068; */
+h3 {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    padding: 3px;
 }
 
-.light-mode {
-    background-color: white;
+h2 {
+    font-family: 'Cinzel', serif;
+    color: #b5864f;
+    margin-top: 30px;
+    padding: 10px;
+    text-shadow: 1px 1px 2px #999;
+    border-bottom: 1px solid #b5864f;
 }
 
-button {
-    background-color: transparent;
-    border: 2px solid transparent;
-    font-family:'Segoe UI', sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #ffffff80;
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    margin: 50px auto;
+p,
+ol {
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: rgba(245, 245, 220, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-left: 3px solid #b5864f;
+    color: #333;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-.button-light {
-    color: #00000080;
+ol {
+    padding-left: 40px;
 }
 
-.container:hover {
-    transform: scale(1.01);
-    transition: transform 0.5s ease-in;
+li {
+    margin: 10px 0;
 }
 
-.para {
-    font-family: 'Verdana', sans-serif;
+strong {
+    color: #b5864f;
+    font-family: 'Cinzel', serif;
 }
 
-#bold-l {
-    font-size: xx-large;
+.book-intro {
+    background-color: rgba(250, 235, 215, 0.9);
+    border-left: 5px solid #b5864f;
+    padding: 20px;
+    margin: 20px 0;
+    font-style: italic;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    font-family: 'IM Fell English SC', serif;
+    color: #333;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.chapter {
+    background-color: rgba(253, 245, 230, 0.9);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #b5864f;
+    color: #333;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+footer {
+    position: sticky;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(28, 28, 28, 0.8);
+    color: #f8f8f2;
+    border-top: 1px solid #444;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.6);
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+a {
+    color: #b5864f;
+    text-decoration: none;
+    border-bottom: 1px dotted #b5864f;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .chapter,
+    .book-intro,
+    p,
+    ol {
+        padding: 10px;
+    }
+}
+
+.dark-mode {
+    background: #333;
+    color: #f0e6d2;
+}
+
+.dark-mode .container, .dark-mode .book-intro, .dark-mode .chapter, .dark-mode ol, .dark-mode p {
+    background: rgba(20, 20, 20, 0.8);
+    color: #f0e6d2;
+}
+
+.dark-mode footer {
+    background-color: rgba(10, 10, 10, 0.3);
+    border-color: rgba(10, 10, 10, 0.3);
+}
+
+#theme-toggle {
+    font-family:'IM Fell English SC', serif;
+    position: fixed;
+    top: 20px;
+    left: 75px;
+    background-color: rgba(28, 28, 28, 0.8);
+    color: #f8f8f2;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+    transition: background-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background-color: rgba(10, 10, 10, 0.7);
+}
+
+.dark-mode #theme-toggle:hover {
+    background-color: rgba(10, 10, 10, 0.4);
+}
+
+.menu-toggle {
+    position: fixed;
+    top: 32px;
+    left: 35px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: rgba(10, 10, 15, 0.9);
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-toggle span:last-child {
+    margin-bottom: 0;
+}
+
+.menu-toggle.open span:first-child {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+
+.menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.open span:last-child {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+
+body.dark-mode .theme-toggle {
+    background-color: rgba(10, 10, 15, 0.9);
+    color: #f0e6d2;
+}
+
+body.dark-mode .theme-toggle:hover {
+    background-color: rgba(5, 5, 10, 0.9);
+}
+
+body.dark-mode .menu-toggle span {
+    background-color: #f0e6d2;
+}
+
+body.dark-mode .menu-toggle.open span {
+    background-color: #333;
 }
